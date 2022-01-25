@@ -31,7 +31,7 @@
 def numbers_stats():
     x=[] 
     for i in range(int(input("How many elements are in list : "))): 
-        x.append(int(input()))
+        x.append(int(input("Enter number "+ str(i+1)+": ")))
     cumu = 0
     for o in range(len(x)):
         cumu += x[o] 
@@ -39,10 +39,8 @@ def numbers_stats():
     x.sort
     max = x[(len(x)-1)]
     min = x[0]
-
-    print(str(max))
-    print(str(min))
-    print(str(average))
+    print(" The largest number is " + str(max) + ", the smallest one is " + str(min) +  " and the average is " + str(average))
+    
 
 numbers_stats()
 
