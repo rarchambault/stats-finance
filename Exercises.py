@@ -36,7 +36,7 @@ def numbers_stats():
     for o in range(len(x)):
         cumu += x[o] 
     average = cumu / len(x)
-    x.sort
+    x.sort()
     max = x[(len(x)-1)]
     min = x[0]
     print(" The largest number is " + str(max) + ", the smallest one is " + str(min) +  " and the average is " + str(average))
