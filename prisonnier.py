@@ -20,7 +20,7 @@ def toTime(i):
 
 #n = list(map(int, input("elements of array:-").strip().split()))
 
-def number_stats(a):
+#def number_stats(a):
     smallest = 0
     largest = 0
     sum = 0
@@ -33,14 +33,24 @@ def number_stats(a):
     print("The smallest number is " + str(smallest) + ", the largest number is " + str(largest) + ", and the average is " + str(average) + ".")
 
 
-n=int(input("Number of elements in array:"))
-a=[]
-for i in range(0,n):
-   l=int(input("Enter number: "))
-   a.append(l)
-number_stats(a)
+#n=int(input("Number of elements in array:"))
+#a=[]
+#for i in range(0,n):
+#   l=int(input("Enter number: "))
+#   a.append(l)
+#number_stats(a)
    
-
-
+def toBinary(i):
+    rest = int(i/2)
+    bit = i%2
+    result = str(bit)
+    while (rest != 0):
+        rest = int(i/2)
+        bit = i%2
+        result += str(bit)
+    result = result[::-1]
+    return result
    
-
+n = int(input("Enter a positive number: "))
+output = toBinary(n)
+print(output)
