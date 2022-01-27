@@ -11,7 +11,7 @@
 # import string
 
 
-# def toTime(i):
+# # def toTime(i):
     
 #     seconds = i % 60
 #     left_min_heure_ensec = i - seconds
@@ -26,7 +26,7 @@
 # conversion = toTime(time)
 # print(conversion)
 
-                                                        #exercise 3
+#                                                         exercise 3
 
 # def numbers_stats():
 #     x=[] 
@@ -44,29 +44,54 @@
 
 # a  refaire en faisant des for pour le max et min et input le array
 
-from operator import index
+# from operator import index
 
 
-def chienne(grosse_plote):
-    RammasisDeMarde = 0
-    tit_penis = 0    
-    gros_penis = 0
-    tabarnak = 0
-    for tapette in range(len(grosse_plote)):
-        if grosse_plote[tapette] < tit_penis or tapette == 0:
-            tit_penis = grosse_plote[tapette]
-        if grosse_plote[tapette] > gros_penis:
-            gros_penis = grosse_plote[tapette] 
-        RammasisDeMarde += grosse_plote[tapette]
-        tabarnak = RammasisDeMarde/len(grosse_plote)
-    print("Le plus grand nombre est : " + str(gros_penis) + ", le plus petit nombre est : " + str(tit_penis) + ", la moyenne est : " + str(tabarnak) + ".")
-caliss=[]
-suce = int(input("Combien voulez-vous qu'il y aie de nombres? :"))
-for fif in range(suce):
-    caliss.append(float(input("Veuillez entrer le nombre " + str(fif + 1) +" : ")))
-chienne(caliss)
+# def chienne(grosse_plote):
+#     RammasisDeMarde = 0
+#     tit_penis = 0    
+#     gros_penis = 0
+#     tabarnak = 0
+#     for tapette in range(len(grosse_plote)):
+#         if grosse_plote[tapette] < tit_penis or tapette == 0:
+#             tit_penis = grosse_plote[tapette]
+#         if grosse_plote[tapette] > gros_penis:
+#             gros_penis = grosse_plote[tapette] 
+#         RammasisDeMarde += grosse_plote[tapette]
+#         tabarnak = RammasisDeMarde/len(grosse_plote)
+#     print("Le plus grand nombre est : " + str(gros_penis) + ", le plus petit nombre est : " + str(tit_penis) + ", la moyenne est : " + str(tabarnak) + ".")
+# caliss=[]
+# suce = int(input("Combien voulez-vous qu'il y aie de nombres? :"))
+# for fif in range(suce):
+#     caliss.append(float(input("Veuillez entrer le nombre " + str(fif + 1) +" : ")))
+# chienne(caliss)
 
     
+                                                        #exercise 5
+                                                        
+from tkinter import N
+
+
+def toBinary(x):
+    string = ""
+    i = 0
+    
+    while x != 0: 
+        modulo = x % (2**i)
+        string += str(x % 2)
+        x -= int(string)
+        i = i + 1
+        
+        
+    print(string)
+
+x = int(input("Veuillez entrer un nombre entier positif: "))
+toBinary(x)
+
+
+
+
+
 
 
                                         
