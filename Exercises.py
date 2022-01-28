@@ -64,29 +64,64 @@
 # suce = int(input("Combien voulez-vous qu'il y aie de nombres? :"))
 # for fif in range(suce):
 #     caliss.append(float(input("Veuillez entrer le nombre " + str(fif + 1) +" : ")))
-# chienne(caliss)
+# # chienne(caliss)
 
     
-                                                        #exercise 5
+# #                                                         #exercise 5
                                                         
-from tkinter import N
+# # def toBinary(x):
+# #     string = ""
+# #     new_string = ""
+# #     while x != 0:
+# #         modulo = x % 2
+# #         x = x // 2
+# #         string += str(modulo)
+# #     string = reversed(string)
+# #     for i in string:
+# #         new_string += i
 
-
-def toBinary(x):
-    string = ""
-    i = 0
+# #     print(new_string)
     
-    while x != 0: 
-        modulo = x % (2**i)
-        string += str(x % 2)
-        x -= int(string)
-        i = i + 1
-        
-        
-    print(string)
+# #     # print(string[::-1])
 
-x = int(input("Veuillez entrer un nombre entier positif: "))
-toBinary(x)
+# # x = int(input("Veuillez entrer un nombre entier positif: "))
+# # toBinary(x)
+def to_Decimal(s):
+    decimal = 0
+    s[::-1]
+    for each in range(len(s)-1):
+        if each == 0:
+            decimal += int(s[each]) * (2**0)
+        elif each != 0:
+            decimal += int(s[each]) * (2**each)
+    print(decimal)
+
+count = 0
+blacklist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ23456789 "
+valideur = 0
+while valideur == 0:
+    binary = input("Please enter a binary number: ")
+    for i in range(len(blacklist)-1):
+        if blacklist[i] in binary:
+            count += 1
+    if count > 0:
+        binary = ""
+        print("This number you have entered is not binary, please start again")
+        count = 0
+    elif count == 0:
+        valideur += 1
+
+to_Decimal(binary)
+
+        
+    
+
+
+
+
+
+    
+
 
 
 
@@ -95,6 +130,7 @@ toBinary(x)
 
 
                                         
+
 
 
 
