@@ -88,12 +88,15 @@
 # # toBinary(x)
 def to_Decimal(s):
     decimal = 0
-    s[::-1]
+    power = 1
+    s = s[::-1]
     for each in range(len(s)-1):
-        if each == 0:
-            decimal += int(s[each]) * (2**0)
-        elif each != 0:
-            decimal += int(s[each]) * (2**each)
+        decimal = decimal + int(s[each])*power
+        power = 2*power
+       # if each == 0:
+            #decimal += int(s[each]) * (2**0)
+        #elif each != 0:
+            #decimal += int(s[each]) * (2**each)
     print(decimal)
 
 count = 0
